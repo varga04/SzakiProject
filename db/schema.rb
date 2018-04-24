@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_04_24_090343) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -35,10 +38,6 @@ ActiveRecord::Schema.define(version: 2018_04_24_090343) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "category_id"
-    t.string "szaki_img_file_name"
-    t.string "szaki_img_content_type"
-    t.integer "szaki_img_file_size"
-    t.datetime "szaki_img_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

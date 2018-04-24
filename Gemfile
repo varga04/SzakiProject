@@ -38,7 +38,6 @@ gem 'simple_form', '~> 4.0'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'jquery-rails'
 gem 'devise', '~> 4.4', '>= 4.4.3'
-gem 'paperclip', '~> 6.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
