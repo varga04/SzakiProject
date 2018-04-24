@@ -1,0 +1,16 @@
+hu:
+  activerecord:
+      models:
+        szaki:
+            edit: "szerkesztés"
+            destroy: "törlés"
+            back: "vissza"
+        category:
+          one: "Kategória"
+          other: "Kategóriák"
+      attributes:
+        post:
+          title: "Cím"
+          lead: "Lead"
+          body: "Törzs"
+          category_id: "Kategória"

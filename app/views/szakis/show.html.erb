@@ -6,7 +6,7 @@
     <div class="szaki-info">
     <h2 class="szaki-title"><%= @szaki.title %></h2>
     <h3 class="szaki-worktype"><%= @szaki.worktype %></h3>
-    <h2 class="avg-rating">Averge Rating</h2>
+    <h2 class="avg-rating">Értékelések átlaga: </h2>
     <div class="average-review-rating" data-score=<%= @average_review %>></div>
     <span class="number-of-reviews"> Értékelések száma: <%= @szaki.reviews.count %></span>
     <p class="szaki-desc"><%= @szaki.description %></p>
@@ -20,18 +20,18 @@
     <div class="reviews">
     <%= render @szaki.reviews %>
     <div>
-      <%= link_to "Add Review", new_szaki_review_path(@szaki), class: "btn-custom"%>
+      <%= link_to "Értékelés", new_szaki_review_path(@szaki), class: "btn-custom"%>
     </div>
     </div>
   </div>
 </div>
 <div class="links btn-group">
-  <%= link_to "Back" , root_path, class: "btn btn-custom" %>
+  <%= link_to "Vissza" , root_path, class: "btn btn-custom" %>
   <% if user_signed_in? %>
   <% if @szaki.user_id == current_user.id %>
 
-    <%= link_to "Edit", edit_szaki_path(@szaki), class: "btn btn-custom" %>
-    <%= link_to "Delete", szaki_path(@szaki), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-custom" %>
+    <%= link_to "Szerkesztés", edit_szaki_path(@szaki), class: "btn btn-custom" %>
+    <%= link_to "Törlés", szaki_path(@szaki), method: :delete, data: {confirm: "Biztos törlöd?"}, class: "btn btn-custom" %>
 
   <% end %>
 <% end %>

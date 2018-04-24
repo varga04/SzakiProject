@@ -1,12 +1,12 @@
 <div class="col-md-6 col-md-offset-3">
   <div class="edit-szaki-form">
-      <h1>Edit Szaki</h1>
+      <h1>Szaki szerkesztése</h1>
 
 <%= simple_form_for @szaki, :html => { :multipart => true} do |f| %>
       <%= f.select :category_id, @categories %>
-      <%= f.input :title, label: "Work Title" %>
-      <%= f.input :description %>
-      <%= f.input :worktype %>
+      <%= f.input :title, label: "Munka címe: " %>
+      <%= f.input :description, label: "Leírás a munkáról: "%>
+      <%= f.input :worktype, label: "Munka típusa: " %>
       <%= f.button :submit, :class => "btn-custom2" %>
 <% end %>
   </div>

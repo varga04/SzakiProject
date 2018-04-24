@@ -6,8 +6,8 @@
 <% if user_signed_in? %>
   <% if review.user_id == current_user.id %>
       <div class="links btn-group">
-      <%= link_to "Edit" , edit_szaki_review_path(review.szaki, review), class: "btn btn-custom" %>
-      <%= link_to "Delete" , szaki_review_path(review.szaki, review), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-custom" %>
+      <%= link_to "Szerkesztés" , edit_szaki_review_path(review.szaki, review), class: "btn btn-custom" %>
+      <%= link_to "Törlés" , szaki_review_path(review.szaki, review), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-custom" %>
       </div>
   <%end %>
 <%end %>
