@@ -1,0 +1,13 @@
+<div class="col-md-6 col-md-offset-3">
+  <div class="edit-szaki-form">
+      <h1>Edit Szaki</h1>
+
+<%= simple_form_for @szaki, :html => { :multipart => true} do |f| %>
+      <%= f.select :category_id, @categories %>
+      <%= f.input :title, label: "Work Title" %>
+      <%= f.input :description %>
+      <%= f.input :worktype %>
+      <%= f.button :submit, :class => "btn-custom2" %>
+<% end %>
+  </div>
+</div>

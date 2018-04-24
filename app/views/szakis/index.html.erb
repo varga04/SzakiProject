@@ -1,0 +1,17 @@
+<h1 class="current-category"><%= params[:category] %></h1>
+
+<% if @szakik.count ==0 %>
+  <h1>Jelenleg nincs ilyen szaki ebben a kategóriában</h1>
+  <% else%>
+  <div class="row">
+    <% @szakik.each do |szaki| %>
+
+    <a href="/szakis/<%= szaki.id %>">
+      <div class="col-md-3">
+      <h2 align="center" ><%= link_to szaki.title, szaki_path(szaki), :class => 'title-color' %></h2>
+      <h2 class="szaki_img"><%= image_tag('missing.png' , size: "200x225")%></h2>
+      </div>
+    </a>
+    <% end %>
+    </div>
+<% end %>

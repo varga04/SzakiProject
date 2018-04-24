@@ -1,0 +1,7 @@
+<%= simple_form_for @szaki, :html => { :multipart => true } do |f| %>
+  <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a category", required: true) %>
+  <%= f.input :title, label: "Work Title"%>
+  <%= f.input :description %>
+  <%= f.input :worktype %>
+  <%= f.button :submit, :class => 'btn-custom2' %>
+<% end %>
