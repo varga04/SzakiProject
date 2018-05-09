@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  has_many :szakis
+  has_and_belongs_to_many :szakis
 end
